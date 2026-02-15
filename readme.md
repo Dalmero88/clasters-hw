@@ -29,8 +29,8 @@
 
 **1. Настроим с помощью Terraform кластер баз данных MySQL**:
 
-   - Описываем переменные в [**variables.tf**](https://github.com/Daimero88/clasters-hw/blob/main/variables.tf), где указываем private и public сети во всех 3 зонах яндекса. Далее в файле [**vpc.tf**](https://github.com/Daimero88/clasters-hw/blob/main/vpc.tf) опишем создание ресурсов сетей, nat шлюза и таблицы маршрутизации.
-   - В файле [**mysql.tf**](https://github.com/Daimero88/clasters-hw/blob/main/mysql.tf) описываем создание кластера с необходимыми параметрами и созданием БД.  
+   - Описываем переменные в [**variables.tf**](https://github.com/Dalmero88/clasters-hw/blob/88e8141be1a8d41950a36e456bd7892b21048eb3/variables.tf), где указываем private и public сети во всех 3 зонах яндекса. Далее в файле [**vpc.tf**](https://github.com/Dalmero88/clasters-hw/blob/88e8141be1a8d41950a36e456bd7892b21048eb3/vpc.tf) опишем создание ресурсов сетей, nat шлюза и таблицы маршрутизации.
+   - В файле [**mysql.tf**](https://github.com/Dalmero88/clasters-hw/blob/88e8141be1a8d41950a36e456bd7892b21048eb3/mysql.tf) описываем создание кластера с необходимыми параметрами и созданием БД.  
       
 После применения конфигурации, проверим, что все ресурсы создались в облаке:  
 
@@ -52,8 +52,8 @@
 
 **2. Настроим с помощью Terraform кластер Kubernetes:**
 
-   - Опишем создание кластера с сервисными аккаунтами в [**k8s.tf**](https://github.com/Daimero88/clasters-hw/blob/main/k8s.tf), добавим в [**variables.tf**](https://github.com/Daimero88/clasters-hw/blob/main/variables.tf) необходимые переменные
-   - Добавим возможность шифрования ключом из [**kms.tf**](https://github.com/Daimero88/clasters-hw/blob/main/kms.tf)  
+   - Опишем создание кластера с сервисными аккаунтами в [**k8s.tf**](https://github.com/Dalmero88/clasters-hw/blob/88e8141be1a8d41950a36e456bd7892b21048eb3/k8s.tf), добавим в [**variables.tf**](https://github.com/Dalmero88/clasters-hw/blob/88e8141be1a8d41950a36e456bd7892b21048eb3/variables.tf) необходимые переменные
+   - Добавим возможность шифрования ключом из [**kms.tf**](https://github.com/Dalmero88/clasters-hw/blob/88e8141be1a8d41950a36e456bd7892b21048eb3/kms.tf)  
 
 После применения конфигурации, проверим, что все ресурсы создались в облаке:  
 
@@ -71,7 +71,7 @@
     <img width="560" height="381" alt="image12" src="https://github.com/user-attachments/assets/577beb76-0fc9-40fa-8566-97ad1c6c231b" />  
   - Подключаемся к кластеру с помощью kubectl и проверяем список нод:  
     <img width="516" height="89" alt="image13" src="https://github.com/user-attachments/assets/0d4fd0f7-d17c-412a-a6cd-a57898753b20" />  
-  - Создание микросервиса phpmyadmin с сервисом Load Balancer описываем также в [**k8s.tf**](https://github.com/Daimero88/clasters-hw/blob/main/k8s.tf), из [**outputs.tf**](https://github.com/Daimero88/clasters-hw/blob/main/outputs.tf) берем IP балансера и адрес базы данных:  
+  - Создание микросервиса phpmyadmin с сервисом Load Balancer описываем также в [**k8s.tf**](https://github.com/Dalmero88/clasters-hw/blob/88e8141be1a8d41950a36e456bd7892b21048eb3/k8s.tf), из [**outputs.tf**](https://github.com/Dalmero88/clasters-hw/blob/88e8141be1a8d41950a36e456bd7892b21048eb3/outputs.tf) берем IP балансера и адрес базы данных:  
     <img width="425" height="217" alt="image14" src="https://github.com/user-attachments/assets/7d41c4aa-b1ad-4849-a0a0-2e406a46508b" />  
     Проверяем что страница доступна:  
     <img width="918" height="605" alt="image15" src="https://github.com/user-attachments/assets/5f276867-ac3f-4613-99fd-277a4906a5e5" />  
